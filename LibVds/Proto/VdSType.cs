@@ -28,6 +28,8 @@ namespace LibVds.Proto
         Ascii_Zeichenfolge = 0x54,
         Aktuell_unterstuetzte_Satztypen = 0x55, // Muss
         Identifikations_Nummer = 0x56, // Muss
+        Geraete_Identifikation = 0x57,
+        Geraete_UUID = 0x58,
         Netzstatus = 0x60,
         Transportdienstkennung = 0x61,
         Quelladresse_aus_dem_Netz = 0x62,

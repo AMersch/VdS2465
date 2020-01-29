@@ -1,84 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E98F299E-1169-418B-B64E-08B55BA9DF9A}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LibVds</RootNamespace>
-    <AssemblyName>LibVds</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog">
-      <HintPath>..\packages\NLog.3.2.0.0\lib\net45\NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
+    <PackageReference Include="NLog" Version="4.6.8" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_02.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_03.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_04.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_10_A.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_10_B.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_11.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_20.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_30.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_40.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_41_A.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_41_B.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_51.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_54.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_55.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_56.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS_FF.cs" />
-    <Compile Include="Proto\InformationId.cs" />
-    <Compile Include="Proto\FrameTcp.cs" />
-    <Compile Include="Proto\Apdu\FrameVdS.cs" />
-    <Compile Include="Proto\ProtocolId.cs" />
-    <Compile Include="Proto\VdSServer.cs" />
-    <Compile Include="Proto\SessionVdS.cs" />
-    <Compile Include="Proto\VdsClient.cs" />
-    <Compile Include="Proto\VdSType.cs" />
-    <Compile Include="Utils\Half.cs" />
-    <Compile Include="Utils\HalfHelper.cs" />
+    <Folder Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
